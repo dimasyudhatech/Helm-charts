@@ -1,0 +1,15 @@
+name: dimasyudha-client
+namespace: dev
+replicas: 3
+image:
+  repository: dimasyudha-client
+  tag: 0.0.1
+
+config:
+  NEXT_HOST: http://localhost
+  NEXT_PORT: "3000"
+
+autoscaling:
+  minReplicas: 1
+  maxReplicas: 5
+  targetCPUUtilization: 80
